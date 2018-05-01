@@ -1,0 +1,21 @@
+<!--HOME PAGE-->
+<div id="main-container">
+    <div id="band" class="container text-center">
+        <h1><b>Our Team Memebrs</b></h1><br/>
+        <h2><b>Click on the Photo to see full Team member info</b></h2>
+        <br/>
+        <hr/>
+
+    </div>
+
+    <div style="text-align: center" *ngFor="let x of this.homeAllUsersData.data ,let j=index">
+
+        <div routerLink="/slctusr" (click)="sendChosenUser(x.id)">
+            <img src="{{x.avatar}}" class="img-circle" height="120px" width="120px" />
+        </div>
+        <br/>
+    </div>
+
+   
+
+</div>
